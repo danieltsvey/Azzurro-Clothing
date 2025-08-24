@@ -1,0 +1,410 @@
+:root{
+    --navlink-color: #00ffae;
+    --section-min-width: 300px;
+    --section-fluid-width: 80%;
+    --section-max-width: 1200px;
+
+    --hero-picture-min-width: 200px;
+    --hero-picture-fluid-width: 90%;
+    --hero-picture-max-width: 600px;
+
+    --hero-picture-text-font-size: clamp(0.5rem, 2vw, 1rem);
+
+    --our-shirts-text-div-margin: 6rem auto 0 auto;
+    --our-shirts-picture-width: clamp(100px, 60%, 400px);
+    --our-shirts-info-text-font-size: clamp(0.5rem, 1.5vw, 2rem);
+    --info-text-padding: 3%;
+    --info-text-line-height: clamp(0.5rem, 1.5, 4rem);
+    --our-shirts-picture-top-div-width: 70%;
+
+    --img-width-s: 300px;
+    --img-width-m: 450px;
+    --img-width-l: 600px;
+    --img-width-xl: 750px;
+
+    --div-bottom-margin: 2em
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Playfair Display", serif;
+    box-sizing: border-box;
+}
+
+/* ---------------------- RESPONSIVE CLASSES ---------------------- */
+
+.responsive-heading-wrapper{
+    z-index: 3;
+    position: sticky;
+    top: 72px;
+    background-color: #ffffff;
+}
+
+.responsive-heading {
+    font-size: clamp(1.8rem, 10vw, 6rem);
+    margin-bottom: 0em;
+    text-align: center;
+    font-weight: 600;
+} 
+
+section {
+    width: var(--section-fluid-width);
+    max-width: var(--section-max-width);
+    min-width: var(--section-min-width);
+    margin: 0 auto 10rem auto;
+}
+
+/* ---------------------- HEADER / SIDE-BAR ---------------------- */
+
+p{
+    font-size: 1.3em;
+}
+
+/* .playfair-display-logo-font {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+.sidepanel{
+    z-index: 30000;
+    height: 100vh;
+    width: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.3s;
+    background-color: #000000;
+    white-space: nowrap;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+#closebtn {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.sidepanel a:hover{
+    background-color: #444;
+}
+
+.sidepanel .closebtn{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color: #444;
+}
+
+
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px clamp(10px, 5vw, 70px);
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 72px;
+}
+
+#logo-text{
+    text-align: center;
+    width: 300px;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+#header li {
+    list-style: none;
+    width: auto;
+
+}
+
+#header a > i{
+    color: #000000;
+}
+
+#header button{
+    color: #ffffff;
+}
+
+.searchbar-container{  
+    box-sizing: border-box;
+    padding: 1em; 
+    /* width: 250px; */
+    /* background-color: #6b9989;  */
+    border-radius: 10px;
+}
+
+.searchbar-container button{
+    background-color: #0b152a; 
+    border: none;
+}
+
+#search-input{
+    display: none;
+}
+
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+}
+
+/* ---------------------- MAIN CONTENT ---------------------- */
+
+
+
+#text-picture-div{
+}
+
+.img-text-wrapper{
+    max-width: var(--hero-picture-max-width);
+    width: var(--hero-picture-fluid-width);
+    min-width: var(--hero-picture-min-width);
+    margin: auto;
+}
+
+.img-text-wrapper img {
+    width: 100%;
+}
+
+.img-text-wrapper p {
+    width: 50%;
+    margin-left: auto;
+    text-align: right;
+    line-height: 1.35;
+    font-size: var(--hero-picture-text-font-size);
+}
+
+
+/* ---------------------- OUR SHIRTS ---------------------- */
+
+
+.picture-div{
+    margin: var(--our-shirts-text-div-margin);
+    display: flex;
+    align-items: center;
+    
+}
+
+.our-shirts-text-div {
+    padding: var(--info-text-padding);
+    line-height: var(--info-text-line-height);
+}
+
+.our-shirts-text-div > p {
+    font-size: var(--our-shirts-info-text-font-size);
+}
+
+.picture-div img{
+    width: var(--our-shirts-picture-width);
+}
+
+.picture-left-div img{
+	margin-right: 1em;
+	float: left; /* fallback */
+}
+
+#text-left-aligned{
+
+}
+
+#text-right-aligned{
+    text-align: right;
+}
+
+.picture-right-div img{
+    margin-left: 1em;
+	float: right; /* fallback */
+}
+
+
+.picture-top-div{
+    margin: var(--our-shirts-text-div-margin);
+    width: var(--our-shirts-picture-top-div-width);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.picture-top-div img {
+    height: 150px;
+    width: 100%; 
+}
+
+.picture-top-div p {
+    text-align: center;
+}
+
+
+/* ---------------------- ABOUT ---------------------- */
+
+.about-div {
+    margin: 2em 0;
+}
+
+.about-text-div {
+    padding: var(--info-text-padding);
+}
+
+#scissors-text-div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#scissors{
+    max-width: var(--img-width-xl);
+    width: 100%;
+    min-width: none;
+}
+
+#scissors-text-div p {
+    text-align: center;
+}
+
+#sewing-text-div{
+    display: flex;
+    align-items: center;
+}
+
+#sewing{
+    margin-right: 1em;
+}
+
+#sewing-text-div p{
+    text-align: left;
+}
+
+
+
+#about-bottom-text{
+
+}
+
+#about-bottom-text :nth-child(1){
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#about-bottom-text :nth-child(2){
+    margin: auto;
+    text-align: center;
+    width: 180px;
+    font-weight: 700;
+}
+
+
+/* ---------------------- COLLECTION ---------------------- */
+
+#collection-heading{
+    
+}
+
+.product-container{
+    /* background-color: rgb(233, 244, 249); */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+}
+
+.product-card{
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    padding: 16px;
+    margin: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.image-wrapper{
+    /* background-color: rgb(252, 245, 237);  */
+    position: relative;
+    width: 100%;
+    height: 250px
+    
+}
+
+.image-wrapper img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.image-wrapper img.product-img-back{
+    opacity: 0;
+}
+
+.image-wrapper:hover .product-img-front {
+    opacity: 0;
+}
+
+.image-wrapper:hover .product-img-back {
+    opacity: 1;
+}
+
+#view-collection-button{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #000000;
+    transition: 0.1s ease;
+}
+
+#view-collection-button:hover {
+    background-color: #000000;
+    cursor: pointer;
+}
+
+#view-collection-button:hover p{
+    color: #ffffff;
+    
+}
+
+#view-collection-button p{
+    font-weight: 500;
+}
