@@ -21,9 +21,9 @@
     --hero-picture-text-font-size: clamp(0.5rem, 2vw, 1rem);
 
     --our-shirts-text-div-margin: 2rem auto 0 auto;
-    --our-shirts-picture-width: clamp(100px, 50%, 400px);
+    --our-shirts-picture-width: clamp(100px, 45%, 400px);
     --our-shirts-info-text-font-size: clamp(0.5rem, 1.5vw, 2rem);
-    --info-text-line-height: 2;
+    --info-text-line-height: 2 + 0.5rem;
     --our-shirts-picture-top-div-width: 70%;
 
 
@@ -85,13 +85,6 @@ section {
 /* ---------------------- HEADER / SIDE-BAR ---------------------- */
 
 
-
-/* .playfair-display-logo-font {
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-  } */
 
 .sidepanel{
     z-index: 30000;
@@ -209,9 +202,6 @@ section {
 
 
 
-#text-picture-div{
-}
-
 .img-text-wrapper{
     max-width: var(--hero-picture-max-width);
     width: var(--hero-picture-fluid-width);
@@ -238,20 +228,16 @@ section {
 .picture-div{
     margin: var(--our-shirts-text-div-margin);
     display: flex;
-    align-items: center;
-    /* background-color: rgb(255, 239, 220); */
-    
+    align-items: center;    
 }
 
 .our-shirts-text-div {
     padding: var(--space-m);
-    /* background-color: rgb(236, 215, 255); */
 }
 
 .our-shirts-text-div > p {
     font-size: var(--our-shirts-info-text-font-size);
     line-height: var(--info-text-line-height);
-    /* background-color: rgb(207, 255, 255); */
 }
 
 .picture-div img{
@@ -263,11 +249,8 @@ section {
 	float: left; /* fallback */
 }
 
-#text-left-aligned{
 
-}
-
-#text-right-aligned{
+.text-right-aligned{
     text-align: right;
 }
 
