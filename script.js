@@ -84,3 +84,5 @@ products.forEach(product => {
     container.appendChild(card);
 });
 
+// --------------- Style Recommendation Carousel --------------- //
+

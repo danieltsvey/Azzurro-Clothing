@@ -3,9 +3,15 @@
     --line-height-base: 1.2;
 
     --font-size-base: clamp(0.5rem, 1.5vw, 1.25rem);
+
+    --font-size-span-m: 20px; 
+
+    --font-size-link-s: 15px;
+
     --font-weight-m: 500;
     --font-weight-l: 700;
 
+    --space-xs: 0.5rem;
     --space-s: 0.75rem;
     --space-m: 1rem;
     --space-l: 2rem;
@@ -177,11 +183,17 @@ section {
 .sidepanel a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--font-size-link-s);
     color: white;
     display: block;
     transition: 0.1s;
     opacity: 0;
+}
+
+.sidepanel a.deactivated-link {
+    color: #bbbbbbc0;
+    cursor: not-allowed;
+    pointer-events: none;
 }
 
 #closebtn {
@@ -461,5 +473,54 @@ section {
     opacity: 1;
 }
 
+
+/* ---------------------- FOOTER ---------------------- */
+
+footer {
+    background-color: #c5c5c5;
+    display: flex;
+    justify-content: center;
+    
+}
+footer .wide-section {
+    /* background-color: rgb(186, 254, 254); */
+    display: flex;
+    justify-content: center;
+}
+
+.footer-column {
+    /* background-color: beige; */
+    margin: var(--space-l);
+    font-size: var(--font-size-base);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column span {
+    font-weight: var(--font-weight-l);
+    color: black;
+    display: block;
+    font-size: var(--font-size-span-m);
+}
+
+.footer-column a {
+    padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-xs);
+    text-decoration: none;
+    color: black;
+    display: block;
+    font-size: var(--font-size-link-s);
+
+}
+
+.indented-element {
+    margin-left: 1rem;
+}
+
+.footer-icon {
+    width: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
