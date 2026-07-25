@@ -211,9 +211,9 @@ section {
     padding-right: 16px;
 }
 
-.sidepanel a:hover{
+/* .sidepanel a:hover{
     background-color: #444;
-}
+} */
 
 .sidepanel .closebtn{
     position: absolute;
@@ -236,11 +236,16 @@ section {
     justify-content: center;
 
     box-sizing: border-box;
+    color: aqua;
 }
 
-.openbtn:hover {
+/* .openbtn:hover {
     background-color: #444;
 }
+
+.openbtn:hover img {
+    filter: brightness(0) invert(1);
+} */
         
 
 
