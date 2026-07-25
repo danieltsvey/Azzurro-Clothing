@@ -24,6 +24,52 @@ function closeNav() {
     })
 }
 
+
+//Suchknopf
+
+const header = document.getElementById("header");
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search-submit");
+
+searchButton.addEventListener("click", function () {
+        header.classList.add("search-open")
+        searchInput.focus();
+    });
+
+searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        closeSearch();
+    }
+});
+
+document.addEventListener("click", function (event) {
+    const clickedInsideSearch = event.target.closest(".searchbar-container");
+
+    if (!clickedInsideSearch) {
+        closeSearch();
+    }
+});
+
+function closeSearch() {
+    header.classList.remove("search-open");
+    header.classList.add("search-closing");
+
+    searchInput.blur();
+
+    function finishClosing(event) {
+        if (event.propertyName !== "width") {
+            return;
+        }
+
+        header.classList.remove("search-closing");
+        searchInput.removeEventListener("transitionend", finishClosing);
+    }
+    
+    searchInput.addEventListener("transitionend", finishClosing);
+
+}
+  
+    
 // logo Text ändern abhängig von Scroll Distanz
 
 window.addEventListener("scroll", scrollChange);
