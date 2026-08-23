@@ -51,6 +51,11 @@ document.addEventListener("click", function (event) {
 });
 
 function closeSearch() {
+
+    if (!header.classList.contains("search-open")) {
+        return;
+    }
+    
     header.classList.remove("search-open");
     header.classList.add("search-closing");
 
